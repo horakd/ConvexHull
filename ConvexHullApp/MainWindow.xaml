@@ -1,0 +1,20 @@
+﻿<Window x:Class="ConvexHullApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:ScottPlot="clr-namespace:ScottPlot;assembly=ScottPlot.WPF"
+        xmlns:local="clr-namespace:ConvexHullApp"
+		mc:Ignorable="d"
+        Title="Convex Hull" Height="475" Width="800" ResizeMode="CanResize" MinHeight="475" MinWidth="800">
+	<Viewbox MinWidth="800" MinHeight="475">
+		<Grid MinWidth="800" MinHeight="475">
+			<Button x:Name="UploadBtn" Content="Upload data" ToolTip="Upload data from text file" Click="UploadBtn_Click" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" MinWidth="75" MinHeight="20"/>
+			<Button x:Name="CalcBtn" Content="Calculate" ToolTip="Calculate convex hull with Graham scan algorithm" Click="CalcBtn_Click" HorizontalAlignment="Left" Margin="235,10,0,0" VerticalAlignment="Top" MinWidth="55" MinHeight="20"/>
+			<TextBox x:Name="PointsTB" GotFocus="PointsTB_GotFocus" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Left" Margin="8,36,0,75" MinHeight="364" Height="364" MinWidth="280" Width="280"/>
+			<ScottPlot:WpfPlot x:Name="Graph" Margin="293,10,10,75" />
+			<Label Content="Result:" HorizontalAlignment="Left" Margin="10,405,0,0" VerticalAlignment="Top"/>
+			<TextBlock x:Name="ResultTB" Margin="55,410,0,0" TextWrapping="Wrap" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" MinWidth="735"/>
+		</Grid>
+	</Viewbox>
+</Window>
